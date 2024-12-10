@@ -1,236 +1,242 @@
-<!--
-  Hello!
-  -
-  Simplefolio is a clean and responsive portfolio template for Developers!
-  Created by Jacobo Martinez.
-  -
-  Github Repo: https://github.com/cobiwave/simplefolio/
-  Readme: https://github.com/cobiwave/simplefolio/README.md
-  -
-  For business & inquires, contact me -> jacobojavier98@gmail.com
--->
 <!DOCTYPE html>
-<html lang="en" class="sr">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="google-site-verification" content="_-DsPVM1mKXI1ed-cTqkSHsCYYUB6PbqhC140RyX1kg" />
-    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Nicole A. Pantin - Information Technology Student at Northern Iloilo State University">
+    <meta name="keywords" content="Nicole Pantin, IT Student, Web Development, Networking, Programming, NISU CICS">
+    <title>Nicole A. Pantin - IT Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --neon-blue: #00f0ff;
+            --neon-pink: #ff00bf;
+            --dark-bg: #121212;
+            --dark-card: #1e1e1e;
+        }
 
-    <!-- Todo: put here your site title -->
-    <title>Nicole A. Pantin  | NISU | CICS</title>
-    <!-- Todo: add some coding keywords below - e.g: (javascript, yourusername, etc) -->
-    <meta name="keywords" content="[username], [name], skill" />
-    <!-- Todo: improve your SEO by adding a small description of you -->
-    <meta name="description" content="Nicole A. Pantin  | Developer" />
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="styles.scss" />
-    <script
-      defer
-      src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"
-    ></script>
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            line-height: 1.6;
+        }
 
-    <!-- Todo: remove the below script once you finish your portfolio -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-  </head>
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-  <!-- Todo: read the following HTML Todos to create your stunning portfolio website -->
-  <body>
-    <div id="top"></div>
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 2px solid var(--neon-blue);
+        }
 
-    <!-- **** Hero Section **** -->
-    <section id="hero" class="jumbotron">
-      <div class="container">
-        <h1 class="hero-title load-hidden">
-          Hi, my name is <span class="text-color-main">Nicole A. Pantin</span>
-          <br />
-          I'm an Information Technology student.
-        </h1>
-        <p class="hero-cta load-hidden">
-          <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about"
-            >Know more</a
-          >
-        </p>
-      </div>
-    </section>
-    <!-- /END Hero Section -->
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
 
-    <!-- **** About Section **** -->
-    <section id="about">
-      <div class="container">
-        <h2 class="section-title load-hidden">About me</h2>
-        <div class="row about-wrapper">
-          <div class="col-md-6 col-sm-12">
-            <div class="about-wrapper__image load-hidden">
-              <img
-                alt="Profile Image"
-                class="img-fluid rounded shadow-lg"
-                height="auto"
-                width="300px"
-                src="assets/profile.jpg"
-                alt="Profile Image"
-              />
+        .hero {
+            display: flex;
+            align-items: center;
+            margin: 50px 0;
+            background-color: var(--dark-card);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero h1 {
+            color: var(--neon-blue);
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
+
+        .hero p {
+            color: #c0c0c0;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--neon-pink);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px var(--neon-pink);
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px var(--neon-pink);
+        }
+
+        section {
+            margin: 50px 0;
+            background-color: var(--dark-card);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 0, 191, 0.2);
+        }
+
+        section h2 {
+            color: var(--neon-pink);
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px var(--neon-pink);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .social-links a {
+            color: var(--neon-blue);
+            margin-right: 15px;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--neon-pink);
+        }
+
+        @media (max-width: 768px) {
+            .hero, .skills-grid {
+                flex-direction: column;
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Nicole A. Pantin</div>
+            <nav class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Hi, I'm Nicole A. Pantin</h1>
+                <p>Information Technology Student at Northern Iloilo State University</p>
+                <a href="#" class="btn">View Resume</a>
             </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <div class="about-wrapper__info load-hidden">
-              <p class="about-wrapper__info-text">
-                Hi, I'm <strong>Nicole A. Pantin</strong>. I am a 4th-year Bachelor
-                of Science in Information Technology student at Northern Iloilo
-                State University, Estancia Iloilo. I'm dedicated to my studies and
-                excited about pursuing a career in the IT field.
-              </p>
-              <span class="d-flex mt-3">
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  class="cta-btn cta-btn--resume"
-                  href="assets/resume.pdf"
-                >
-                  View Resume
-                </a>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section id="education">
-      <div class="container">
-        <h2 class="section-title load-hidden">Educational Attainment</h2>
-        <div class="row about-wrapper">
-          <div class="col-md-12">
-            <div class="about-wrapper__info load-hidden">
-              <ul>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi, I'm <strong>Nicole A. Pantin</strong>. I am a 4th-year Bachelor of Science in Information Technology student at Northern Iloilo State University, Estancia Iloilo. I'm dedicated to my studies and excited about pursuing a career in the IT field.</p>
+        </section>
+
+        <section id="education">
+            <h2>Educational Attainment</h2>
+            <ul>
                 <li><strong>Tertiary:</strong> Northern Iloilo State University (2024-2025)</li>
                 <li><strong>SHS:</strong> Nicomedes R. Tubar Sr. National High School (2020-2021) | Strand: Computer System Services</li>
                 <li><strong>JHS:</strong> Nicomedes R. Tubar Sr. National High School (2019-2020)</li>
                 <li><strong>Elementary:</strong> San Dionisio Central Elementary School (2014-2015)</li>
-              </ul>
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div>
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>Programming: Java, C++, JavaScript</li>
+                        <li>Web Development: HTML, CSS, JavaScript</li>
+                        <li>Networking: TCP/IP, basic network configuration</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Problem-solving</li>
+                        <li>Communication</li>
+                        <li>Teamwork</li>
+                        <li>Time Management</li>
+                        <li>Adaptability</li>
+                    </ul>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section id="skills">
-      <div class="container">
-        <h2 class="section-title load-hidden">Skills</h2>
-        <div class="row about-wrapper">
-          <div class="col-md-12">
-            <div class="about-wrapper__info load-hidden">
-              <h3>Technical Skills:</h3>
-              <ul>
-                <li>Programming: Java, C++, JavaScript</li>
-                <li>Web Development: HTML, CSS, JavaScript</li>
-                <li>Networking: TCP/IP, basic network configuration</li>
-              </ul>
-              <h3>Soft Skills:</h3>
-              <ul>
-                <li>Problem-solving: Analyzing and solving technical issues</li>
-                <li>Communication: Explaining technical concepts clearly</li>
-                <li>Teamwork: Collaborating on projects</li>
-                <li>Time Management: Handling tasks and deadlines effectively</li>
-                <li>Adaptability: Learning new technologies quickly</li>
-              </ul>
+        </section>
+
+        <section id="services">
+            <h2>Services Offered</h2>
+            <div class="skills-grid">
+                <div>
+                    <h3>Network Administration</h3>
+                    <ul>
+                        <li>Configure and troubleshoot network devices and systems</li>
+                        <li>Set up and manage wireless networks</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Technical Support</h3>
+                    <ul>
+                        <li>Troubleshoot computer and network issues</li>
+                        <li>Provide training on software and hardware</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Other Services</h3>
+                    <ul>
+                        <li>Tutoring: Programming or IT subjects</li>
+                        <li>Research: Emerging technologies or IT trends</li>
+                        <li>Freelancing: Various IT projects</li>
+                    </ul>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section id="services">
-      <div class="container">
-        <h2 class="section-title load-hidden">Services Offered</h2>
-        <div class="row about-wrapper">
-          <div class="col-md-12">
-            <div class="about-wrapper__info load-hidden">
-              <h3>Network Administration:</h3>
-              <ul>
-                <li>Configure and troubleshoot network devices and systems</li>
-                <li>Set up and manage wireless networks</li>
-              </ul>
-              <h3>Technical Support:</h3>
-              <ul>
-                <li>Troubleshoot computer and network issues</li>
-                <li>Provide training on software and hardware</li>
-              </ul>
-              <h3>Other Services:</h3>
-              <ul>
-                <li>Tutoring: Programming or IT subjects</li>
-                <li>Research: Emerging technologies or IT trends</li>
-                <li>Freelancing: Various IT projects</li>
-              </ul>
+        </section>
+
+        <section id="career-goals">
+            <h2>Career Goals</h2>
+            <p>I aspire to use my IT skills to solve real-world problems and contribute to a company that values innovation. I aim to grow into a leadership position where I can mentor others and drive technological progress.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-info">
+                <div>
+                    <p><strong>Phone:</strong> (+63) 9125111520</p>
+                    <p><strong>Email:</strong> nicolepantin2@gmail.com</p>
+                </div>
+                <a href="#" class="btn">Contact Me</a>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section id="career-goals">
-      <div class="container">
-        <h2 class="section-title load-hidden">Career Goals</h2>
-        <div class="row about-wrapper">
-          <div class="col-md-12">
-            <div class="about-wrapper__info load-hidden">
-              <p>
-                I aspire to use my IT skills to solve real-world problems and
-                contribute to a company that values innovation. I aim to grow into
-                a leadership position where I can mentor others and drive
-                technological progress.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <br/>
-<br/>
-<br/>
-<br/>
-
-    
-    <section id="contact">
-      <div class="container">
-        <h2 class="section-title load-hidden">Contact</h2>
-        <div class="contact-wrapper load-hidden">
-          <p class="contact-wrapper__text">Here's my contact info! Let's connect!</p>
-          <p class="contact-wrapper__text">
-            <strong>Phone:</strong> (+63) 9125111520<br />
-            <strong>Email:</strong> <a href="mailto:nicolepantin2@gmail.com">nicolepantin2@gmail.com</a>
-          </p>
-          <a
-            rel="noreferrer"
-            target="_blank"
-            class="cta-btn cta-btn--resume"
-            href="mailto:nicolepantin2@gmail.com"
-          >
-            Contact Me
-          </a>
-        </div>
-      </div>
-    </section>
-    
-    <!-- /END About Section -->
-
-
-    <!-- **** Contact Section **** -->
-  
-    <!-- /END Contact Section -->
-
-    <!-- **** Footer Section **** -->
-    <footer class="footer navbar-static-bottom">
-  
-    </footer>
-    <!-- /END Footer Section -->
-
-    <script defer type="module" src="index.js"></script>
-  </body>
+        </section>
+    </div>
+</body>
 </html>
