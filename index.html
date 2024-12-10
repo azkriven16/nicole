@@ -61,6 +61,16 @@
 
         .hero-content {
             flex: 1;
+            padding-right: 20px;
+        }
+
+        .hero-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--neon-blue);
+            box-shadow: 0 0 20px var(--neon-blue);
         }
 
         .hero h1 {
@@ -129,8 +139,17 @@
         }
 
         @media (max-width: 768px) {
-            .hero, .skills-grid {
+            .hero {
                 flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-content {
+                padding-right: 0;
+                margin-top: 20px;
+            }
+
+            .skills-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -153,8 +172,12 @@
                 <p>Information Technology Student at Northern Iloilo State University</p>
                 <a href="#" class="btn">View Resume</a>
             </div>
+            <img src="./m.jpg" alt="Nicole A. Pantin" class="hero-image">
         </section>
 
+        <!-- Rest of the content remains the same as in the previous artifact -->
+        
+        <!-- Content from previous version continues... -->
         <section id="about">
             <h2>About Me</h2>
             <p>Hi, I'm <strong>Nicole A. Pantin</strong>. I am a 4th-year Bachelor of Science in Information Technology student at Northern Iloilo State University, Estancia Iloilo. I'm dedicated to my studies and excited about pursuing a career in the IT field.</p>
